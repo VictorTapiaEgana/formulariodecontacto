@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
+const path = require('path');
 
 module.exports = async function sendEmail(para,asunto,parametros){       
   
@@ -13,11 +14,14 @@ module.exports = async function sendEmail(para,asunto,parametros){
     
     const hbsOptions = {   
           viewEngine:{
-            partialsDir:`${__dirname}/../views/styles`,
+            partialsDir:path.join(process.cwd(),'views/Styles'),
             defaultLayout:false
           },
-          viewPath:`${__dirname}/../views`  
+          viewPath:path.join(process.cwd(),'views')
     };
+
+    console.log(hbsOptions)
+    console.log(path.join(process.cwd()));
     
     transport.use('compile',hbs(hbsOptions));
 

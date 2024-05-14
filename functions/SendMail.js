@@ -46,7 +46,7 @@ module.exports = async function sendEmail(para,asunto,parametros){
         const info = await transport.sendMail(mailOptions);
         return `Correo enviado exitosamente !!!`;
     } catch (err) {
-        throw new Error(`Error correo no enviado: ${err}`);
+        return (`Error correo no enviado: ${err}`);
     }
 
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla correo</title>
+
+    {{> plantilla1 }}
+    
+</head>
+
+<body>
+    <header>
+       <span>{{nombre}}: Gracias por comunicarse, en breve responderemos su solicitud.</span>
+    </header>
+    
+    &nbsp;
+    
+    <section>
+        <div id="mensaje">
+            {{cuerpo}}
+            
+        </div>
+    </section>
+    
+    &nbsp;
+    
+    <footer>
+        <a href="https://github.com/VictorTapiaEgana">
+          <img src="https://raw.githubusercontent.com/VictorTapiaEgana/imagenes/master/firmacorreo/firma.png" 
+               alt="firma del correo"
+               width="1000" >
+        </a>
+    </footer>
+    
+</body>
+</html>

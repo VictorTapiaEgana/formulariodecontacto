@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css" />    
+    <link rel="stylesheet" href="assets/css/contacto.css">
+    <title>Contacto</title>
+</head>
+
+<body class="bg-dark">    
+
+    <form class="text-white m-1">
+            <h3 class="text-center">Datos de contacto </h3>
+
+        <div class="mb-3">
+            <label for="inputNombre" class="form-label">Nombre de contacto</label>
+            <input type="text" class="form-control" id="inputNombre" aria-describedby="emailHelp">             
+        </div>
+
+        <label for="inputEmail" class="form-label">Correo de contacto</label>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="inputEmail">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="InputServidor"> 
+        </div>          
+        
+        <div class="mb-3">
+          <label for="inputAsunto" class="form-label">Asunto</label>
+          <textarea class="form-control" id="inputAsunto" rows="3"></textarea>
+        </div>
+        
+        <button id="enviar" class="btn btn-primary">enviar ✉</button>
+        
+      </form>
+
+    <script src="/cssjs/bootstrap.bundle.js"></script>
+    <script src="/assets/js/contacto.js"></script>
+
+</body>
+</html>

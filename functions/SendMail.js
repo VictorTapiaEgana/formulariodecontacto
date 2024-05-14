@@ -29,7 +29,8 @@ module.exports = async function sendEmail(para,asunto,parametros){
         to: para,
         cc: 'victortapiaegana@gmail.com',
         subject: asunto,
-        template: 'plantilla1',
+        // template: 'plantilla1',
+        html:'<h1>Hola</h1>',
         context:parametros,
     }
 
@@ -49,6 +50,4 @@ module.exports = async function sendEmail(para,asunto,parametros){
         return (`Error correo no enviado: ${err}`);
     }
 
-
 };
-

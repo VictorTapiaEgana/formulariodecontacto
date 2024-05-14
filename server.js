@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const sendEmail = require('./functions/SendMail.js')
 
@@ -9,12 +10,14 @@ require('dotenv').config();
 
 const PORT =  process.env.PORT || 3005;
 
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
-app.use('/cssjs', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
-app.use('/assets', express.static(__dirname + '/public'));
+app.use('/css', express.static(path.join(process.cwd(), '/node_modules/bootstrap/dist/css')));
+
+app.use('/cssjs', express.static(path.join(process.cwd(), '/node_modules/bootstrap/dist/js')));
+
+app.use('/assets',express.static(path.join(process.cwd(), "/public")));
 
 app.get('/contacto',(req,res)=>{
-    res.sendFile(__dirname + '/contacto.html')
+    res.sendFile(path.join(process.cwd(), '/contacto.html'));
 });
 
 app.post('/registro', async (req, res) => {    

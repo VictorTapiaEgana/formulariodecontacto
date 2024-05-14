@@ -26,7 +26,7 @@ app.post('/registro', async (req, res) => {
         res.status(200).send('Registro Exitoso');
     } catch (error) {
         console.error(error);        
-        res.status(500).send('Error al enviar el correo');
+        res.status(500).send(`Error al enviar el correo: ${err}`);
     }
 
 });

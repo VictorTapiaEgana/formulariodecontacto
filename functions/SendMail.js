@@ -13,10 +13,10 @@ module.exports = async function sendEmail(para,asunto,parametros){
     
     const hbsOptions = {   
           viewEngine:{
-            partialsDir:'../views/Styles',
+            partialsDir:`${__dirname}/../views/styles`,
             defaultLayout:false
           },
-          viewPath:'../views'  
+          viewPath:`${__dirname}/../views`  
     };
     
     transport.use('compile',hbs(hbsOptions));

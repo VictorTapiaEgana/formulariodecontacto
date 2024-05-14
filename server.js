@@ -24,12 +24,11 @@ app.post('/registro', async (req, res) => {
     try {
         const resultado = await sendEmail(para, asunto, parametros);        
         res.status(200).send('Registro Exitoso');
-    } catch (error) {
-        console.error(error);        
+    } catch (error) {        
         res.status(500).send(`Error al enviar el correo: ${err}`);
     }
 
-});
+});   
 
 app.get('*',(req,res)=>{
       res.redirect('/contacto')

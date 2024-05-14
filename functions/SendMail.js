@@ -13,10 +13,10 @@ module.exports = async function sendEmail(para,asunto,parametros){
     
     const hbsOptions = {   
           viewEngine:{
-            partialsDir:'views/Styles',
+            partialsDir:'../views/Styles',
             defaultLayout:false
           },
-          viewPath:'views'  
+          viewPath:'../views'  
     };
     
     transport.use('compile',hbs(hbsOptions));
@@ -29,8 +29,8 @@ module.exports = async function sendEmail(para,asunto,parametros){
         to: para,
         cc: 'victortapiaegana@gmail.com',
         subject: asunto,
-        // template: 'plantilla1',
-        html:'<h1>Hola</h1>',
+         template: 'plantilla1',
+        // html:'<h1>Hola</h1>',
         context:parametros,
     }
 
